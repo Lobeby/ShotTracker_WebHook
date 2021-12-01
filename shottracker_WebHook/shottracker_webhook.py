@@ -109,7 +109,7 @@ def sendSTDigest(urlWebHook, loginID, loginPW, pfeID):
                     postDiscordList[tempPost].sort()
                 postDiscordList = {k: v for k, v in sorted(postDiscordList.items())}
                 
-                if len( str(itemData['vignette']) ) != 0 :
+                if len( str(itemData['vignette']) ) != 0 and ' ' not in str(itemData['vignette']):
                     vignette = 'http://tracker.artfx.fr/tracker/data/vignette/'+str(pfeID)+'/'+str(idData)+ '/960/' + str(itemData['vignette'])
 
     # Log out from ShotTracker
